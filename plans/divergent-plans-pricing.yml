@@ -1,0 +1,19 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.divergent.us/
+plan_count: 0
+note: >-
+  Divergent publishes no pricing, plans or tiers of any kind. The company sells
+  manufactured structures and production capacity under negotiated contracts to
+  automotive OEMs and aerospace/defense programs, not a self-serve product. The entire
+  divergent.us site is five URLs (home, contact, news, privacy policy, terms of service)
+  with no pricing page; the only commercial entry point is the contact form. There is no
+  API, so there is nothing to meter or bill. This is a recorded absence, not an omission.
+plans: []
+evidence:
+- url: https://www.divergent.us/sitemap.xml
+  status: 200
+  note: full sitemap contains no pricing or plans URL
+- url: https://www.divergent.us/contact
+  status: 200
+  note: contact-sales form is the sole commercial entry point

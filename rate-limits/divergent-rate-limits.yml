@@ -1,0 +1,16 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.divergent.us/
+limit_count: 0
+note: >-
+  No rate limits are published because Divergent publishes no API. There is no developer
+  portal, reference, or machine-readable contract on any Divergent host, so there is no
+  runtime surface to limit and no response headers to document. Recorded as a verified
+  zero rather than omitted.
+rate_limits: []
+headers: []
+evidence:
+- url: https://www.divergent.us/openapi.json
+  status: 404
+- url: https://www.divergent.us/docs
+  status: 404
