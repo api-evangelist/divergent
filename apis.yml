@@ -16,7 +16,7 @@ url: https://raw.githubusercontent.com/api-evangelist/divergent/refs/heads/main/
 image: https://ihglvckx7z2732pf.public.blob.vercel-storage.com/daps_desaturated.png
 x-type: company
 x-source: harvest:secondary-market
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-08-12'
 modified: '2026-08-12'
 tags:
