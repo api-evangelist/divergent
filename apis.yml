@@ -13,6 +13,17 @@ description: 'Divergent Technologies, Inc. is a Torrance and Long Beach, Califor
   production capacity, not software: it publishes no developer portal, no public API,
   and no machine-readable contract of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/divergent/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://ihglvckx7z2732pf.public.blob.vercel-storage.com/daps_desaturated.png
 x-type: company
 x-source: harvest:secondary-market
