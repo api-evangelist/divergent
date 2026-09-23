@@ -2,33 +2,15 @@ generated: '2026-08-12'
 method: probed
 source: live HTTPS probes of the Divergent web host
 host: https://www.divergent.us
-note: >-
-  Every /.well-known/ path probed on the live Divergent host returned 404 with an
-  HTML body. No discovery document of any kind is served. The legacy divergent3d.com
-  apex 301s to www.divergent.us (and presents an expired TLS certificate on the way),
-  so it exposes no separate well-known surface. No candidate API host exists to probe:
-  api., developer., docs., portal., daps., mcp. and status. under divergent.us are all
-  NXDOMAIN. This file records a verified ABSENCE — no WellKnown or SecurityTxt pointer
-  is emitted in apis.yml, because no path returned a real document.
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-- path: /.well-known/agent-card.json
-  status: 404
-- path: /.well-known/agent.json
-  status: 404
+note: 'Every /.well-known/ path probed on the live Divergent host returned 404 with an HTML body. No discovery
+  document of any kind is served. The legacy divergent3d.com apex 301s to www.divergent.us (and presents
+  an expired TLS certificate on the way), so it exposes no separate well-known surface. No candidate API
+  host exists to probe: api., developer., docs., portal., daps., mcp. and status. under divergent.us are
+  all NXDOMAIN. This file records a verified ABSENCE — no WellKnown or SecurityTxt pointer is emitted
+  in apis.yml, because no path returned a real document.'
 contract_discovery:
-  note: >-
-    STEP 0b contract discovery run in full against every reachable Divergent host.
-    No REST OpenAPI, no GraphQL endpoint, no MCP server and no A2A agent card exist.
+  note: STEP 0b contract discovery run in full against every reachable Divergent host. No REST OpenAPI,
+    no GraphQL endpoint, no MCP server and no A2A agent card exist.
   probes:
   - url: https://www.divergent.us/openapi.json
     status: 404
@@ -59,3 +41,25 @@ contract_discovery:
   - daps.divergent.us
   - mcp.divergent.us
   - status.divergent.us
+hosts:
+- host: https://www.divergent.us
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
